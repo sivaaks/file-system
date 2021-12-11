@@ -2,7 +2,7 @@ const express= require('express');
 const cors=require('cors');
 const db= require('./shared/db.connect');
 
-const roomsRoute= require('./routes/rooms.route');
+const filesRoute= require('./routes/files.route');
 
 const app= express();
 const PORT=3001;
@@ -18,7 +18,7 @@ const PORT=3001;
 
        // app.use(authTokenCheck);
         
-        app.use('/rooms',roomsRoute);
+        app.use('/files',filesRoute);
         
         app.listen(process.env.PORT||PORT);
 
