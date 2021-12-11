@@ -1,7 +1,3 @@
-const db=require('../shared/db.connect');
-const {createRoom,bookRoom}=require('../shared/validation');
-const {dateTime} = require('../shared/utils');
-const {ObjectId}= require('mongodb');
 const fs=require('fs');
 
 const files={
@@ -14,7 +10,6 @@ const files={
             if (err) return res.status(400).send(`Error creating file ${err}`);
             return res.status(200).send('File created successfully');
         });
-
     },
 
     async listFiles(req,res){
